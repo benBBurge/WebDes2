@@ -1,0 +1,109 @@
+br {
+	size: 3px;
+	color: black;
+}
+
+figcaption {
+    width: 95%;
+    text-align: center;
+}
+
+figure {
+	float: left;
+}
+
+h5 {
+	color: grey;
+}
+
+.artBody {
+    padding-right: 60px;
+    padding-left: 30px;
+}
+
+.artBody.story {
+	align-items: right;
+}
+
+
+.largeIMG {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.smallIMG {
+	padding-right: 10px;
+	width: 100%;
+}
+
+#logoImg {
+	padding-left: 10px;
+	float: left;
+	width: 25%;
+}
+
+.titlebar {
+	float: left-top;
+	padding: 30px;
+	display: inline-block;
+	list-style-type: none;
+	width:100%;
+}
+
+.topbar {
+	font-size: 12px;
+}
+
+.topbar.left {
+	float: left;
+}
+
+.topbar.right {
+	float: right;
+}
+
+.actionnav.donate {
+	background: red;
+	color: white;
+	display: inline-block;
+	list-style-type: none;
+}
+
+.actionnav {
+	display: inline-block;
+	list-style-type: none;
+	padding: 15px;
+}
+
+.titlebarnav {
+	display: inline-block;
+	list-style-type: none;
+	padding: 15px;
+}
+
+.everything {
+	padding-left: 30px;
+	padding-right: 60px;
+}
+
+.orgnav {
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 15px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-bottom:10px;
+}
+
+.orgnav.current {
+	background: green;
+	color: white;
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 15px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-bottom:10px;
+}

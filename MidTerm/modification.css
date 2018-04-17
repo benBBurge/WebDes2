@@ -1,0 +1,156 @@
+.largeIMG {       /* Shrinks/grows related stories */
+    -webkit-animation: shrink 3s 2s infinite;
+    animation: shrink 3s 2s infinite;
+}
+
+.artBody.story {     /* makes the body's text do a dance when first visiting */
+    -webkit-animation: letters 5s 0s;
+    animation: letters 5s 0s;
+}
+
+.icon {             /* all the icons spin!  */
+    -webkit-animation: loop 9s 3s infinite;
+    animation: loop 9s 3s infinite;
+}
+
+.logo {             /* ProPublica logo-- makes it wiggle */
+    -webkit-animation: wiggle 5s 4s infinite alternate;
+    animation: wiggle 5s 4s infinite alternate;
+}
+
+#logoImg {          /* Scale overwrites rotation, so to both at the same time we assign one to the div holding the img and one to the img */
+    -webkit-animation: shrink 5s 4s infinite;   /* unlike the classes used, this id needed to be refernced in the HTML */
+    animation: shrink 5s 4s infinite;
+}
+
+.orgnav:hover {
+    font-size: 10px;
+}
+
+.actionnav {      /* Here we define a transition state so that when we mouse off it fades out */
+    background-color: white;
+    transition: background-color 2s ease-in-out;
+}
+
+.actionnav:hover {    /* and when we mouse over, it fades in */
+    background-color: green;
+}
+
+.smallIMG {     /* series photo skews */
+    transition: transform 2s linear;
+}
+
+.smallIMG:hover {
+    -webkit-transform: skew(-20deg, -20deg);
+    -ms-transform: skew(-20deg, -20deg);
+    transform: skew(-20deg, -20deg);
+}
+
+.actionnav.donate {        /* I think I'm going to be sick */
+    -webkit-animation: loop 5s 0s infinite;
+    animation: loop 5s 0s infinite;
+}
+
+@keyframes letters {
+    0% {
+        -webkit-text-transform: uppercase;
+        -ms-text-transform: uppercase;
+        text-transform: uppercase;
+        font-size: 32px;
+    }
+    50% {
+        -webkit-text-transform: capitalize;
+        -ms-text-transform: capitalize;
+        text-transform: capitalize;
+        font-size: 16px;
+    }
+    100% {
+        /* back to normal */
+    }
+}
+
+@keyframes loop {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } /* begining state */
+    33% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    } 
+    66% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    } /* end state */
+}
+
+@keyframes shrink {
+    0% {
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    } /* begining state */
+    25% {
+        -webkit-transform: scale(.5, .5);
+        -ms-transform: scale(.5, .5);
+        transform: scale(.5, .5);
+    }
+    50% {
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    75% {
+        -webkit-transform: scale(.5, .5);
+        -ms-transform: scale(.5, .5);
+        transform: scale(.5, .5);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+    } /* end state */
+} 
+
+@keyframes wiggle {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } /*begining state*/
+    25% {
+        -webkit-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    75% {
+        -webkit-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } /*end state*/
+}
+
+/*
+-webkit- for old chrome, ios, android, and safari
+-ms- for IE 9
+everything else should be covered by just the command
+-ms- is not needed for animations.
+*/
